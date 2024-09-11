@@ -1,15 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+
+function fake({ perfil }) {
+  const { nome, idade, biografia, email, contato} = perfil;
+   return(
+    <div className="fake">
+    <h2>{nome}</h2>,
+    <p><b>Idade:</b><i>{idade}</i> </p>,
+    <p><b>Biografia:</b><i>{biografia}</i></p>,
+    <p><b>Contato:</b><i>{contato}</i></p>,
+    <p><b>Email:</b><i>{email}</i></p>,      
+  </div>
+
+   )
+  
+  };  
+
+    
+
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
